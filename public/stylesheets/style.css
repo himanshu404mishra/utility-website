@@ -12,3 +12,91 @@ body {
 .hidden{
     display: none;
 }
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 18px;
+   
+}
+header > h1 {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+nav ul li{
+  list-style: none;
+  margin: 0 10px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  
+  background-color: transparent;
+  &.active{
+    background-color: rgba(235, 235, 235, 0.856);
+  }
+  &:hover{
+    background-color: transparent;
+    outline: 1px solid black;
+  }
+}
+
+#utils{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.themeSwitcher button{
+  font-size: 20px;
+  outline: 2px solid rgba(128, 128, 128, 0.493);
+  border: none;
+  background-color: rgba(184, 184, 184, 0.459);
+  color: rgba(0, 0, 0, 0.836);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover{
+    background-color: rgba(184, 184, 184, 0.659);
+    color: #000;
+  }
+  &:active{
+    scale: 0.9;
+  }
+}
+.github button{
+  font-size: 20px;
+  outline: 2px solid rgba(128, 128, 128, 0.493);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: rgba(255, 255, 255, 0.836);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover{
+    background-color: rgba(184, 184, 184, 0.659);
+    color: #000;
+  }
+  &:active{
+    scale: 0.9;
+  }
+}
