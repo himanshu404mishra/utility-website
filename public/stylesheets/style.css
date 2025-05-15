@@ -9,33 +9,81 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.hidden{
-    display: none;
+body.dark {
+  background-color: #1a1a1d;
+
+  color: #fff;
 }
 
-header{
+.hidden {
+  display: none;
+}
+
+#hero {
+  width: 95%;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 25px;
+  height: 90%;
+
+  background-color: rgb(185, 255, 185);
+}
+#heroContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  padding: 40px 20px;
+  text-align: center;
+  
+}
+#heroContent h1 {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+#heroContent span {
+  background: rgba(56, 194, 1, 0.301);
+  padding: 10px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(80px);
+}
+#heroContent .btn{
+  background: #000;
+  color: #fff ;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 18px;
-   
+  padding: 10px 0;
+  background-color: rgba(84, 190, 52, 0.404);
+  backdrop-filter: blur(50px);
+
+  border-radius: 50px;
 }
 header > h1 {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
   font-style: normal;
 }
-nav ul{
+nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-nav ul li{
+nav ul li {
   list-style: none;
   margin: 0 10px;
 }
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
@@ -44,25 +92,35 @@ nav ul li a{
   padding: 10px 15px;
   border-radius: 50px;
   transition: all 0.3s ease;
-  
+
   background-color: transparent;
-  &.active{
-    background-color: rgba(235, 235, 235, 0.856);
+  &.active {
+    background-color: rgba(232, 255, 148, 0.856);
   }
-  &:hover{
+  &:hover {
     background-color: transparent;
     outline: 1px solid black;
   }
 }
+body.dark nav ul li a {
+  color: #fff;
+  &:hover {
+    background-color: transparent;
+    outline: 1px solid #a64d79;
+  }
+}
+body.dark nav ul li a.active {
+  background-color: #6a1e55;
+}
 
-#utils{
+#utils {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.themeSwitcher button{
+.themeSwitcher button {
   font-size: 20px;
   outline: 2px solid rgba(128, 128, 128, 0.493);
   border: none;
@@ -73,15 +131,21 @@ nav ul li a{
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover{
+  &:hover {
     background-color: rgba(184, 184, 184, 0.659);
     color: #000;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.github button{
+.themeSwitcher .sun button i {
+  color: #fff;
+}
+body.dark .themeSwitcher button {
+  background-color: #a64d79;
+}
+.github button {
   font-size: 20px;
   outline: 2px solid rgba(128, 128, 128, 0.493);
   border: none;
@@ -92,11 +156,11 @@ nav ul li a{
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover{
+  &:hover {
     background-color: rgba(184, 184, 184, 0.659);
     color: #000;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
